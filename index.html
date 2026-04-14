@@ -426,6 +426,136 @@ img{display:block;max-width:100%;height:auto}
 
 
 /* ══════════════════════════════════
+   V4 — УТВЕРЖДЁННЫЙ (шалфейно-зелёный, увеличенное лицо)
+══════════════════════════════════ */
+.v4{
+  max-width:1080px;margin:0 auto;
+  background:#f5f0ea;border-radius:20px;
+  box-shadow:0 4px 40px rgba(0,0,0,.07);
+  padding:56px 44px 60px;
+  position:relative;overflow:hidden;
+}
+.v4-in{position:relative;z-index:1}
+.v4-head{text-align:center;margin-bottom:44px}
+.v4-pill{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:#6b7e72;background:rgba(138,154,142,.11);
+  border:1px solid rgba(138,154,142,.25);
+  padding:6px 14px;border-radius:20px;margin-bottom:16px;
+}
+.v4-pulse{
+  width:6px;height:6px;border-radius:50%;background:#8a9a8e;
+  box-shadow:0 0 0 0 rgba(138,154,142,.6);animation:v4pulse 2s infinite;
+}
+@keyframes v4pulse{
+  0%  {box-shadow:0 0 0 0 rgba(138,154,142,.6)}
+  70% {box-shadow:0 0 0 8px rgba(138,154,142,0)}
+  100%{box-shadow:0 0 0 0 rgba(138,154,142,0)}
+}
+.v4-h{margin-bottom:24px;line-height:1.05}
+.v4-h span:first-child{
+  display:block;font-family:'Playfair Display',serif;
+  font-size:2.8rem;font-weight:400;color:#2d2826;
+}
+.v4-h span:last-child{
+  display:block;font-family:'Playfair Display',serif;
+  font-size:2.8rem;font-style:italic;font-weight:400;
+  background:linear-gradient(120deg,#8a9a8e,#6b7e72,#4a5e55);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.v4-nums{display:flex;justify-content:center;gap:36px;flex-wrap:wrap}
+.v4-num .n{font-size:1.9rem;font-weight:700;color:#4a5e55;line-height:1;font-variant-numeric:tabular-nums}
+.v4-num .l{font-size:.62rem;color:#8a9a8e;text-transform:uppercase;letter-spacing:.1em;margin-top:4px}
+
+.v4-layout{
+  display:grid;
+  grid-template-columns:240px minmax(0,1fr);
+  gap:36px;align-items:start;
+}
+.v4-photo-col{min-width:0}
+.v4-imgbox{border-radius:16px;overflow:hidden;aspect-ratio:3/4;position:relative}
+.v4-imgbox img{
+  width:100%;height:100%;object-fit:cover;object-position:center 8%;display:block;
+  transition:filter .5s;
+}
+.v4-imgbox:hover img{filter:brightness(.96)}
+.v4-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.35) 0%,transparent 55%)}
+.v4-pbadge{
+  position:absolute;bottom:12px;left:50%;transform:translateX(-50%);
+  width:calc(100% - 22px);
+  background:rgba(255,255,255,.88);backdrop-filter:blur(12px);
+  border:1px solid rgba(0,0,0,.08);border-radius:10px;
+  padding:10px 12px;text-align:center;
+  box-shadow:0 2px 12px rgba(0,0,0,.1);
+}
+.v4-pbs{color:#f0a500;font-size:.72rem;letter-spacing:2px}
+.v4-pbt{font-size:.66rem;color:#6b6560;margin-top:2px}
+
+.v4-cards-col{min-width:0}
+.v4-vp{overflow:hidden;border-radius:14px;width:100%}
+.v4-track{display:flex;will-change:transform;transition:transform .6s cubic-bezier(.25,1,.5,1);width:100%}
+.v4-sl{min-width:100%;width:100%;flex-shrink:0;padding:3px;box-sizing:border-box}
+.v4-card{
+  background:#fff;border:1px solid #e0d8cc;
+  border-radius:14px;padding:20px 18px 16px;
+  position:relative;overflow:hidden;
+  box-shadow:0 2px 14px rgba(0,0,0,.06);
+  min-height:160px;display:flex;flex-direction:column;
+  transition:all .3s;
+}
+.v4-card:hover{background:#faf8f5;border-color:#c9bfb0;transform:translateY(-2px);box-shadow:0 8px 28px rgba(0,0,0,.09)}
+.v4-acc{position:absolute;top:0;left:0;bottom:0;width:3px;background:linear-gradient(to bottom,#8a9a8e,#6b7e72)}
+.v4-ctop{display:flex;align-items:center;gap:10px;margin-bottom:12px;padding-left:8px}
+.v4-cav{
+  width:36px;height:36px;flex-shrink:0;border-radius:50%;
+  background:linear-gradient(135deg,#8a9a8e,#6b7e72);
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-weight:600;font-size:.84rem;
+}
+.v4-cn{font-size:.88rem;font-weight:700;color:#2d2826;line-height:1.3}
+.v4-cs{font-size:.66rem;color:#f0a500;margin-top:2px}
+.v4-vb{
+  width:20px;height:20px;border-radius:50%;margin-left:auto;flex-shrink:0;
+  background:rgba(138,154,142,.12);border:1px solid rgba(138,154,142,.28);
+  color:#6b7e72;font-size:.56rem;
+  display:flex;align-items:center;justify-content:center;
+}
+.v4-ct{font-size:.88rem;line-height:1.68;color:#4a4540;font-style:italic;padding-left:8px;overflow-wrap:break-word;word-break:break-word;flex:1}
+.v4-ctag{
+  display:inline-block;margin-top:14px;
+  font-size:.63rem;color:#6b7e72;
+  background:rgba(138,154,142,.1);border:1px solid rgba(138,154,142,.22);
+  padding:4px 12px;border-radius:20px;
+}
+.v4-ctrl{display:flex;align-items:center;gap:12px;margin-top:14px}
+.v4-nb{
+  width:36px;height:36px;flex-shrink:0;border-radius:50%;
+  background:rgba(138,154,142,.1);border:1px solid rgba(138,154,142,.25);
+  color:#6b7e72;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .2s;-webkit-tap-highlight-color:transparent;font-family:inherit;
+}
+.v4-nb:hover,.v4-nb:active{background:#8a9a8e;color:#fff}
+.v4-pb-w{flex:1;height:3px;background:rgba(138,154,142,.16);border-radius:3px;overflow:hidden;min-width:0}
+.v4-pb{height:100%;background:linear-gradient(to right,#8a9a8e,#6b7e72);border-radius:3px;transition:width .6s ease;width:16.67%}
+.v4-cnt{font-size:.7rem;color:#8a9a8e;white-space:nowrap;font-variant-numeric:tabular-nums;flex-shrink:0}
+.v4-cta-row{margin-top:14px}
+.v4-cta{
+  display:inline-flex;align-items:center;gap:10px;
+  background:linear-gradient(135deg,#6b7e72,#4a5e55);
+  color:#fff;text-decoration:none;
+  padding:14px 26px;border-radius:50px;
+  font-size:.84rem;font-weight:600;letter-spacing:.02em;
+  box-shadow:0 8px 24px rgba(107,126,114,.28);
+  transition:all .3s;-webkit-tap-highlight-color:transparent;font-family:inherit;
+}
+.v4-cta:hover{transform:translateY(-2px);box-shadow:0 16px 36px rgba(107,126,114,.4)}
+.v4-arr{display:inline-block;transition:transform .3s}
+.v4-cta:hover .v4-arr{transform:translateX(4px)}
+
+
+/* ══════════════════════════════════
    RESPONSIVE
 ══════════════════════════════════ */
 
@@ -446,6 +576,11 @@ img{display:block;max-width:100%;height:auto}
   .v3-grid{grid-template-columns:1fr;gap:28px}
   .v3-imgbox{max-width:280px;margin:0 auto}
   .v3-title{font-size:1.75rem}
+
+  .v4{padding:40px 28px 48px}
+  .v4-layout{grid-template-columns:1fr;gap:28px}
+  .v4-imgbox{max-width:240px;margin:0 auto}
+  .v4-h span:first-child,.v4-h span:last-child{font-size:2.2rem}
 }
 
 /* Mobile 600px */
@@ -492,6 +627,16 @@ img{display:block;max-width:100%;height:auto}
   .v3-stats{padding:11px 12px}
   .v3-st-n{font-size:1.05rem}
   .v3-cta{width:100%;justify-content:center;padding:14px 20px}
+
+  /* V4 */
+  .v4{padding:28px 14px 36px;border-radius:16px}
+  .v4-h span:first-child,.v4-h span:last-child{font-size:1.75rem}
+  .v4-nums{gap:20px}
+  .v4-num .n{font-size:1.6rem}
+  .v4-head{margin-bottom:28px}
+  .v4-card{padding:18px 14px}
+  .v4-imgbox{max-width:200px}
+  .v4-cta{padding:12px 22px}
 }
 
 /* Small 380px */
@@ -502,17 +647,20 @@ img{display:block;max-width:100%;height:auto}
   .v1{padding:18px 12px 22px}
   .v2-hero{padding:18px 14px}
   .v3{padding:18px 12px 22px}
+  .v4{padding:18px 12px 22px}
   .v1-card{padding:18px 12px 16px}
   .v2-box{padding:20px 12px 16px}
   .v3-card{padding:16px 12px}
+  .v4-card{padding:16px 12px}
   .v2-bq{font-size:.88rem}
   .v3-bq{font-size:.88rem}
   .v1-text{font-size:.84rem}
+  .v4-h span:first-child,.v4-h span:last-child{font-size:1.55rem}
 }
 
 /* Prevent global horizontal overflow */
-.v1,.v2,.v3{min-width:0}
-.v1-right,.v2-right,.v2-body,.v3-right{min-width:0;max-width:100%}
+.v1,.v2,.v3,.v4{min-width:0}
+.v1-right,.v2-right,.v2-body,.v3-right,.v4-cards-col{min-width:0;max-width:100%}
 
 </style>
 </head>
@@ -524,7 +672,8 @@ img{display:block;max-width:100%;height:auto}
     <span class="nav-lbl">Варианты:</span>
     <button class="nav-btn active" data-target="v1">01 Premium Modern</button>
     <button class="nav-btn"        data-target="v2">02 Emotional Focus</button>
-    <button class="nav-btn"        data-target="v3">03 Структурный</button>
+    <button class="nav-btn"        data-target="v3">03 Лучшее из двух</button>
+    <button class="nav-btn"        data-target="v4">04 Утверждённый</button>
   </div>
 </nav>
 
@@ -820,6 +969,111 @@ img{display:block;max-width:100%;height:auto}
 </section>
 
 
+<!-- ══════════════════════════════════
+     V4 — УТВЕРЖДЁННЫЙ (новый цвет + увеличенное лицо)
+══════════════════════════════════ -->
+<section id="v4" class="sect">
+  <div class="slbl">
+    <span class="slbl-num">04</span>
+    <span class="slbl-name">Утверждённый</span>
+    <span class="slbl-desc">Новый цвет · Увеличенное лицо · Спокойный стиль</span>
+  </div>
+
+  <div class="v4">
+    <div class="v4-in">
+
+      <div class="v4-head">
+        <div class="v4-pill"><div class="v4-pulse"></div>Реальные отзывы</div>
+        <div class="v4-h">
+          <span>Истории</span>
+          <span>трансформации</span>
+        </div>
+        <div class="v4-nums">
+          <div class="v4-num"><div class="n">5.0</div><div class="l">звёзд Google</div></div>
+          <div class="v4-num"><div class="n">200+</div><div class="l">клиентов</div></div>
+          <div class="v4-num"><div class="n">7+</div><div class="l">лет практики</div></div>
+        </div>
+      </div>
+
+      <div class="v4-layout">
+        <div class="v4-photo-col">
+          <div class="v4-imgbox">
+            <img src="nika.jpg" alt="Ника Болзан">
+            <div class="v4-ov"></div>
+            <div class="v4-pbadge"><div class="v4-pbs">★★★★★</div><div class="v4-pbt">5.0 · Google Reviews</div></div>
+          </div>
+        </div>
+
+        <div class="v4-cards-col">
+          <div class="v4-vp">
+            <div class="v4-track" id="v4t">
+
+              <div class="v4-sl"><div class="v4-card">
+                <div class="v4-acc"></div>
+                <div class="v4-ctop"><div class="v4-cav">Н</div><div><div class="v4-cn">Наталія Сахно</div><div class="v4-cs">★★★★★</div></div><div class="v4-vb">✓</div></div>
+                <p class="v4-ct">«С первой встречи — рядом человек, который видит тебя настоящей. Не просто разговор, а реальные перемены.»</p>
+                <div class="v4-ctag">✦ жизнь изменилась</div>
+              </div></div>
+
+              <div class="v4-sl"><div class="v4-card">
+                <div class="v4-acc"></div>
+                <div class="v4-ctop"><div class="v4-cav">С</div><div><div class="v4-cn">Светлана Переправка</div><div class="v4-cs">★★★★★</div></div><div class="v4-vb">✓</div></div>
+                <p class="v4-ct">«В терапии 4 года — есть с чем сравнить. С Никой изменения за 3 месяца. Наконец «проснулась» и начала жить.»</p>
+                <div class="v4-ctag">✦ проснулась к жизни</div>
+              </div></div>
+
+              <div class="v4-sl"><div class="v4-card">
+                <div class="v4-acc"></div>
+                <div class="v4-ctop"><div class="v4-cav">Л</div><div><div class="v4-cn">Людмила Савченко</div><div class="v4-cs">★★★★★</div></div><div class="v4-vb">✓</div></div>
+                <p class="v4-ct">«Жизнь разделилась на «до» и «после». Ушла тревожность, появилась уверенность.»</p>
+                <div class="v4-ctag">✦ до и после</div>
+              </div></div>
+
+              <div class="v4-sl"><div class="v4-card">
+                <div class="v4-acc"></div>
+                <div class="v4-ctop"><div class="v4-cav">А</div><div><div class="v4-cn">Андрій Нагаранський</div><div class="v4-cs">★★★★★</div></div><div class="v4-vb">✓</div></div>
+                <p class="v4-ct">«Обращался после событий войны. Спасибо Нике — она спасла мою психику.»</p>
+                <div class="v4-ctag">✦ поддержка в кризис</div>
+              </div></div>
+
+              <div class="v4-sl"><div class="v4-card">
+                <div class="v4-acc"></div>
+                <div class="v4-ctop"><div class="v4-cav">Д</div><div><div class="v4-cn">Дарья Ходыкина</div><div class="v4-cs">★★★★★</div></div><div class="v4-vb">✓</div></div>
+                <p class="v4-ct">«Учусь на психфаке, отношусь критично. С Никой — впервые безопасность и опора. После 4 сессий наладился сон.»</p>
+                <div class="v4-ctag">✦ безопасность и опора</div>
+              </div></div>
+
+              <div class="v4-sl"><div class="v4-card">
+                <div class="v4-acc"></div>
+                <div class="v4-ctop"><div class="v4-cav">А</div><div><div class="v4-cn">Анна Ревзина</div><div class="v4-cs">★★★★★</div></div><div class="v4-vb">✓</div></div>
+                <p class="v4-ct">«Профессионал и очень чуткий человек. Почувствовала — нахожусь в надёжных руках.»</p>
+                <div class="v4-ctag">✦ надёжные руки</div>
+              </div></div>
+
+              <div class="v4-sl"><div class="v4-card">
+                <div class="v4-acc"></div>
+                <div class="v4-ctop"><div class="v4-cav">Ю</div><div><div class="v4-cn">Юля Бренюк</div><div class="v4-cs">★★★★★</div></div><div class="v4-vb">✓</div></div>
+                <p class="v4-ct">«Уютное общение, полное спокойствие. Ника помогла осознать — я не одинока.»</p>
+                <div class="v4-ctag">✦ я не одинока</div>
+              </div></div>
+
+            </div>
+          </div>
+          <div class="v4-ctrl">
+            <button class="v4-nb" id="v4p"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M15 18L9 12L15 6"/></svg></button>
+            <div class="v4-pb-w"><div class="v4-pb" id="v4pb"></div></div>
+            <button class="v4-nb" id="v4n"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18L15 12L9 6"/></svg></button>
+            <span class="v4-cnt" id="v4cnt">1 / 7</span>
+          </div>
+          <div class="v4-cta-row"><a href="#" class="v4-cta"><span>Начать трансформацию</span><span class="v4-arr">→</span></a></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
 <script>
 // ── SLIDER ─────────────────────────────────────────
 function initSlider(cfg) {
@@ -874,6 +1128,7 @@ function initSlider(cfg) {
 initSlider({t:'v1t',p:'v1p',n:'v1n',d:'v1d',dc:'v1-dot',cnt:'v1cnt',ms:5000});
 initSlider({t:'v2t',p:'v2p',n:'v2n',d:'v2d',dc:'v2-dot',cnt:'v2cnt',ms:6000});
 initSlider({t:'v3t',p:'v3p',n:'v3n',d:'v3d',dc:'v3-dot',cnt:'v3cnt',ms:5500});
+initSlider({t:'v4t',p:'v4p',n:'v4n',pb:'v4pb',cnt:'v4cnt',ms:5500});
 
 // ── NAV ─────────────────────────────────────────────
 document.querySelectorAll('.nav-btn').forEach(function(btn){
@@ -887,7 +1142,7 @@ document.querySelectorAll('.nav-btn').forEach(function(btn){
 });
 (function(){
   var btns = document.querySelectorAll('.nav-btn');
-  var ids  = ['v1','v2','v3'];
+  var ids  = ['v1','v2','v3','v4'];
   function upd(){
     var y = window.pageYOffset + window.innerHeight*0.38;
     var active = ids[0];
